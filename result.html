@@ -6,77 +6,48 @@
 <title>النتيجة</title>
 
 <style>
+*{box-sizing:border-box}
+
 body{
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg,#0b5ed7,#001f5c);
-  text-align:center;
-  padding-top:40px;
-  color:#fff;
-  overflow:hidden;
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#0b5ed7,#001f5c);
+  padding:20px;
 }
 
 .box{
-  background:white;
-  color:#000;
-  width:340px;
-  margin:auto;
+  background:#fff;
+  width:100%;
+  max-width:420px;
   padding:25px;
-  border-radius:16px;
-  box-shadow:0 0 30px rgba(0,0,0,.4);
-  animation: pop 0.7s ease;
-}
-
-@keyframes pop{
-  from{transform:scale(.7);opacity:0}
-  to{transform:scale(1);opacity:1}
+  border-radius:18px;
+  box-shadow:0 20px 50px rgba(0,0,0,.35);
+  text-align:center;
 }
 
 img{
   width:100%;
   border-radius:12px;
-  opacity:0;
-  transform:translateY(20px);
-  animation: fadeIn 1s forwards .5s;
 }
 
-@keyframes fadeIn{
-  to{opacity:1;transform:translateY(0)}
-}
-
-.main-msg{
-  color:#0b5ed7;
+.message{
   margin-top:18px;
-  font-size:22px;
-  font-weight:bold;
-}
-
-.sub-msg{
-  margin-top:12px;
+  color:#333;
+  line-height:1.9;
   font-size:15px;
-  line-height:1.8;
-  color:#444;
-  background:#f5f7ff;
-  padding:14px;
-  border-radius:10px;
-  border-right:4px solid #0b5ed7;
   text-align:right;
-  animation: fadeText 1.2s ease .8s both;
 }
 
-@keyframes fadeText{
-  from{opacity:0;transform:translateY(10px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-button{
-  margin-top:18px;
-  padding:10px 22px;
-  border:none;
-  background:#0b5ed7;
-  color:white;
-  border-radius:8px;
-  cursor:pointer;
-  font-size:15px;
+.signature{
+  margin-top:22px;
+  font-size:26px;
+  font-weight:900;
+  color:#0b5ed7;
+  letter-spacing:1px;
 }
 </style>
 </head>
@@ -84,15 +55,15 @@ button{
 <body>
 
 <div class="box">
-  <img src="https://i.ibb.co/FkNgz6FD/image.jpg" alt="result">
+  <img src="https://i.ibb.co/sdM0Y9WG/IMG-5594.jpg" alt="result">
 
-  <div class="main-msg">🎉 كل سنة وانت طيب يجميل</div>
-
-  <div class="sub-msg">
-    أنا فاهم إنك خايفة ومرتبكة دلوقتي، بس عايزك تعرفي إني موجود جنبك، وبحبك مهما كان. النتيجة هتطلع زي ما هي، وإن شاء الله خير، بس أنا هنا علشانك في كل لحظة.
+  <div class="message">
+    مريومه ، يا أجمل شيء في حياتي، أنتِ النور اللي بينور دنيتي، قلبي بيدق كل مرة بشوفك فيها. صوتك هو أحلى لحن، وابتسامتك تضيء الدنيا كلها. لما تكوني معايا، بحس إن الوقت مش مهم، كل لحظة معاكِ هي الأجمل. أنتِ الحلم اللي تحقق، وأنتِ السند في كل وقت. بحبك أكتر من أي حاجة في الدنيا، إنتِ سر سعادتي، وكل ما بكون معاكِ بحس إن الدنيا بتبقى أحلى. مهما كتبتلك مش هقدر أوصف قد إيه أنتِ مهمة في حياتي. وجودك في حياتي حاجة مقدسة، مهما حاولت أشرح مشاعري، الكلمات مش هتوفيك حقك. أنتِ قلبي، وكل شيء في حياتي بيبقى مليان بحبك. معاكِ بس بقدر أعيش حياة حقيقية، وكل لحظة معاكِ بحس إنها هدية من السماء. بحبك لدرجة إني مش عايز أي حاجة في الدنيا غيرك، إنتِ كل حاجة بالنسبة لي، كل ثانية معاكِ بتعدي وكأنها حلم جميل. مهما حاولت أشرح، مش هقدر، لأنكِ ببساطة أفضل شيء حصل لي.
   </div>
 
-  <button onclick="history.back()">رجوع</button>
+  <div class="signature">
+    حمودي
+  </div>
 </div>
 
 </body>
